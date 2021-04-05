@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form</title>
+    <link  rel="stylesheet" type="text/css" href="style.css">
+    <script src=""></script>
+</head>
+<body background="image/back2.jpg">
+ <form name="userRegForm" onsubmit="return validateForm(this);">
+    <div class="container">
+        <h1>Registration Form</h1>
+        <!--<p>Please fill in this form to create an account.</p>-->
+        <hr>
+        <!--<label for="firstname"><b>Firstname</b></label>-->
+        <input type="text" name="firstName" id="firstName" placeholder="Firstname" autocomplete="false" title="First name is required." oninput="return validateRequired(this);" onchange="return validateRequired(this);"><br>
+        <!--<label for="firstname"><b>Lastname</b></label>-->
+        <input type="text" name="lastName" id="lastName" placeholder="Lastname" autocomplete="false" required title="Last name is required." oninput="return validateRequired(this);" onchange="return validateRequired(this);"><br>
+        <!--<label for="email"><b>Email:</b></label>-->
+        <input type="email" name="email" id="email" placeholder="Email" autocomplete="false" required pattern="^.{0,64}$" title="Enter an email address with a maximum of 64 characters." oninput="validateEmail(this);" onchange="validateEmail(this);"><br>
+        <!--<label for="psw"><b>Password:</b></label>-->
+        <input type="password" name="password" id="password" placeholder="Password" autocomplete="false" required pattern="^((?=.*[0-9])(?=.*[a-zA-Z])).{6,12}$" title="Enter a password between 6 and 12 characters, containing at least one letter and one number." oninput="validatePassword(this);" onchange="validatePassword(this);"><br>
+        <!--<label for="psw-repeat"><b>Confirm Password:</b></label>-->
+        <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confrim Password" autocomplete="false" required pattern="^((?=.*[0-9])(?=.*[a-zA-Z])).{6,12}$" title="Passwords must match." oninput="validatePassword(this);" onchange="validatePassword(this);"><br>
+        <!--<label for="phone">Enter your phone number:</label>-->
+        <input class="tel" type="number" id="phone" placeholder="Mobile Number" name="phone">
+
+        <div class="radio">
+            <input type="radio" id="male" name="gender"><label for="male">Male</label>
+            <input type="radio" id="female" name="gender"><label for="female">Female</label>
+        </div>
+       <hr>
+        <button type="submit" class="register">Register</button>
+    </div>
+</form>
+</body>
+</html>

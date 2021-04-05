@@ -1,0 +1,118 @@
+body {
+    /* background-color: lightblue; */
+    background-size: 100% 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: steelblue;
+}
+
+p {
+    text-align: center;
+}
+
+form {
+    border: black;
+    margin: 50px auto;
+    width: 431px;
+    color: steelblue;
+}
+
+.radio {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+input {
+    padding: 10px;
+    box-sizing: content-box;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 83px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    display: block;
+    width: 55%;
+    margin-left: 65px;
+    border: 2px solid steelblue;
+    background: lightcyan;
+}
+
+input[type="password"] {
+    display: block;
+    /*margin-bottom:10px;*/
+    width: 55%;
+    margin-left: 65px;
+    border: 2px solid steelblue;
+    background: lightcyan;
+}
+
+
+/* input[type="tel"]{ */
+
+.tel {
+    display: block;
+    /*margin-bottom:10px;*/
+    width: 55%;
+    margin-left: 65px;
+    border: 2px solid steelblue;
+    background: lightcyan;
+}
+
+button[type="submit"] {
+    margin-left: 82px;
+    width: 61%;
+    height: 44px;
+    margin-left: 64px;
+    border: none;
+    background: steelblue;
+    color: white;
+}
+
+button[type="submit"]:focus {
+    margin-left: 82px;
+    width: 260px;
+    height: 44px;
+    border: steelblue;
+    background: white;
+    color: steelblue;
+}
+
+input:focus {
+    background: white;
+}
+
+input[type="radio"]:checked+label {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.input-glyph {
+    position: absolute;
+    color: green;
+    right: 10px;
+    pointer-events: none;
+    top: 10px;
+    display: none;
+}
+form:not(.form-inline) label ~ .input-glyph {
+    top: 34px;
+}
+/* Duplicate the selector for classes and pseudo-classes because the entire selector will fail for browsers that don't support `:invalid`. */
+/** * THIS WILL FAIL */
+.form-control.valid ~ .input-glyph, .form-control.valid:invalid ~ .input-glyph {
+    display: block;
+}
+.form-control.valid ~ .input-glyph {
+    display: block;
+}
+.form-control.valid:invalid ~ .input-glyph {
+    display: none;
+}
+.form-control:valid ~ .input-glyph {
+    display: block;
+}
